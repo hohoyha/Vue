@@ -5,8 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="./bower_components/vue/dist/vue.js"></script>
 </head>
 <body>
-    <p>시작합니다.</p>
+    <p>Vue 세계에 오신 것을 환영합니다. </p>
+
+    <div id="app">
+        {{hello}}
+    </div>
+
+    <script>
+        new Vue({
+            el:'#app',
+            data: {
+                hello: 'Hi, Welcome'
+            },
+        });
+    
+    </script>
+
 </body>
 </html>

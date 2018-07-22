@@ -1,0 +1,17 @@
+{
+  "name": "Vue",
+  "homepage": "https://github.com/hohoyha/Vue",
+  "authors": [
+    ""
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
