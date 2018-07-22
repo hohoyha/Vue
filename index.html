@@ -17,6 +17,7 @@
                 {{todo}}
             </li>
         </ul>
+        <img v-bind:src ="log" alt="log" width="200">
     </div>
 
     <script>
@@ -24,7 +25,8 @@
             el:'#app',
             data: {
                 hello: 'Hi, Welcome',
-                todoList:['놀기','먹기','자기']
+                todoList:['놀기','먹기','자기'],
+                log: './src/assets/log.png'
             },
         });
     
