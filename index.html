@@ -12,13 +12,19 @@
 
     <div id="app">
         {{hello}}
+        <ul>
+            <li v-for="todo in todoList">
+                {{todo}}
+            </li>
+        </ul>
     </div>
 
     <script>
         new Vue({
             el:'#app',
             data: {
-                hello: 'Hi, Welcome'
+                hello: 'Hi, Welcome',
+                todoList:['놀기','먹기','자기']
             },
         });
     
