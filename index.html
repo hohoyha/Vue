@@ -12,22 +12,39 @@
 
     <div id="app">
         {{hello}}
-        <ul>
-            <li v-for="todo in todoList">
-                {{todo}}
-            </li>
-        </ul>
+     
+        <todos></todos>
         <img v-bind:src ="log" alt="log" width="200">
     </div>
 
     <script>
+
+        let forlist = {
+            template: `
+            <ol>
+                <li v-for=" todo, index in todoList">
+                    {{index}} {{todo.text}} {{todo.value}}
+                </li>
+            </ol>`,
+            data : function() {
+                return {
+                todoList:[
+                {text:'놀기', value:20},
+                {text:'먹기', value:50},
+                {text:'자기', value:20}],
+                };
+            }
+        }
+
         new Vue({
             el:'#app',
             data: {
                 hello: 'Hi, Welcome',
-                todoList:['놀기','먹기','자기'],
                 log: './src/assets/log.png'
             },
+            components: {
+                todos: forlist
+            }
         });
     
     </script>
